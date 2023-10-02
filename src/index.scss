@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+  font-family: 'Montserrat';
+
+  --linear-gradient: linear-gradient( 130deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+  --main-violet: hsl(237, 58%, 71%);
+  --main-very-light-grayish-blue:  hsl(240, 78%, 98%);
+  --main-light-grayish-blue: hsl(234, 14%, 74%);
+  --main-grayish-blue: hsl(233, 13%, 49%);
+  --main-dark-grayish-blue: hsl(232, 13%, 33%);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  margin: 0;
+  font-size: 15px;
+
+  background-color: var(--main-very-light-grayish-blue);
+  animation: websiteStart 1s;
+  
+  @media (max-width: 500px) {
+    padding-bottom: 50px;
+  }
+}
+
+#bgTop{
+  position: absolute;
+  top: 0;
+  right: 0;
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
+#bgBot{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
+
+#pricingTitle{
+  
+  color: var(--main-grayish-blue);  
+  
+  font-size: 35px;
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+
+  margin-top: 120px;
+
+}
+
+#pricingType {
+
+  margin-top: 30px;
+
+  color: var(--main-light-grayish-blue);
+
+  width: 100%;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  #pricingTypeSwitchBox{
+    cursor: pointer;
+    width: 57px;
+    height: 34px;
+
+    input{
+      display: none;      
+    }
+
+    input:checked + div::after{
+      margin-left: 27px;
+    }
+    input:checked + div {
+      filter:opacity(60%);
+    }
+
+    div{
+      width: 100%;
+      height: 100%;
+      background: var(--linear-gradient);
+      border-radius: 30px;
+
+      transition: all;
+      transition-duration: 0.5s;
+
+      &::after{
+        
+        position: absolute;
+        content: "";
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.337);
+
+        transition: all;
+        transition-duration: 0.2s;
+
+        margin-top: 4px;
+        margin-left: 4px;
+
+        height: 26px;
+        width: 26px;
+        border-radius: 50%;
+        background-color: white;
+
+      }
+    }
+
+  }
+
+}
+
+#priceCards{
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .priceCard{
+    @media (min-width: 500px) {
+      &:nth-child(1){
+      border-radius: 12px 0px 0px 12px;
+      box-shadow: -5px 2px 20px 5px rgba(238, 130, 238, 0.148);
+      }
+      &:nth-child(3){
+        border-radius: 0px 12px 12px 0px;
+        box-shadow: 5px 2px 20px 5px rgba(238, 130, 238, 0.148);
+      }
+    }
+
+    @media (max-width: 500px) {
+      &:nth-child(1){
+      box-shadow: 0px 2px 20px 5px rgba(238, 130, 238, 0.148);
+      }
+      &:nth-child(3){
+        box-shadow: 0px 2px 20px 5px rgba(238, 130, 238, 0.148);
+      }
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+
+    @media (max-width: 500px){
+      width: 300px;
+    }
+
+    width: 350px;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+
+
+    .cardPrice{
+      font-size: 68px;        
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+            
+      .currencySign{
+        font-size: 30px;
+      }
+    }
+
+    .cardCons{
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+
+      hr{
+        width: 100%;
+        border-radius: 0.5px;
+        
+        &:nth-child(1){
+          opacity: 15%;
+        }
+        
+        &:nth-child(3){
+          opacity: 25%;
+        }
+        &:nth-child(5){
+          opacity: 35%;
+        }
+        &:nth-child(7){
+          opacity: 45%;
+        }
+      }
+      
+      .cardCon{
+        font-size: 14px;
+      }
+    }
+
+    form{
+      width: 100%;
+    }
+
+    .cardSubmit{
+      width: 100%;
+      height: 40px;
+      border-radius: 7px;
+      outline: none;
+      border: none;
+
+      cursor: pointer;
+      letter-spacing: 1px;
+
+      font-size: 12px;
+      font-family: 'Montserrat';
+
+    }
+
+
+  }
+
+  .priceCard[data-cardtype="0"] {
+    z-index: 9;      
+
+    color: var(--main-very-light-grayish-blue);
+    background: var(--linear-gradient);
+
+    height: 500px;
+    padding: 64px 30px 40px 30px;
+    
+    box-shadow: 0px 10px 50px 5px rgba(238, 130, 238, 0.278);
+
+    .cardSubmit{
+      span{
+        color: var(--main-violet);
+      }
+
+      &:hover{
+        background: transparent;
+        border: 1px solid var(--main-very-light-grayish-blue);
+
+        span{
+          background: white;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      &:active{
+        transition-duration: 0s;
+        border-color: var(--main-light-grayish-blue);
+      }
+    }
+  }
+
+  .priceCard[data-cardtype="1"] {
+    z-index: 10;
+
+    color: var(--main-dark-grayish-blue);
+    background: rgb(255, 255, 255);
+    
+    padding: 20px 30px 20px 30px;
+    height: 410px;
+
+    .cardCons{
+      hr{
+        border: 0.5px solid var(--main-light-grayish-blue);
+      }
+    }
+
+    .cardSubmit{
+      background: var(--linear-gradient);
+      span{
+        color: white;
+      }
+
+      &:hover{
+        background: transparent;
+        border: 1px solid var(--main-violet);
+
+        span{
+          color: var(--main-violet);
+        }
+      }
+
+      &:active{
+        transition-duration: 0s;
+        border-color: var(--main-light-grayish-blue);
+      }
+    }
+
+  }
+
+
+}
+
+
+
+.priceAnimationClass{
+  animation: changePrice 0.5s 1;
+}
+
+@keyframes websiteStart {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
+}
+
+@keyframes changePrice {
+  0%{ opacity: 100%;}
+  30% {opacity: 0%;}
+  70% {opacity: 0%;}
+  100% {opacity: 100%;}
+}
