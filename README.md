@@ -10,13 +10,10 @@
 ![imageMock](https://github.com/shaxuuu/Prices-Page-Frontend/assets/48029949/1e10f38b-7b0d-4051-a122-cfae49bcc0c0)
 
 
-
-https://github.com/shaxuuu/Prices-Page-Frontend/assets/48029949/762b74fe-9e7f-4e4c-98be-6980caa40e2a
-
-
-https://github.com/shaxuuu/Prices-Page-Frontend/assets/48029949/0c82b64b-dc03-4b2e-86fc-e50e99be2d5d
+https://github.com/shaxuuu/Prices-Page-Frontend/assets/48029949/00b736c5-104c-49d3-92f4-61d00923cc77
 
 
+https://github.com/shaxuuu/Prices-Page-Frontend/assets/48029949/5428e357-f9cb-4f8d-a55d-947f8a7d05c5
 
 
 
