@@ -4,7 +4,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Prices Page</h3>
+  <h1 align="center">Prices Page</h1>
 </div>
 
 
